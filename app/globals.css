@@ -34,6 +34,56 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Gelato Sans';
+  src: url('/font/gelato%20sans/GelatoSans-Regular.woff2') format('woff2'),
+       url('/font/gelato%20sans/GelatoSans-Regular.woff') format('woff'),
+       url('/font/gelato%20sans/GelatoSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gelato Sans';
+  src: url('/font/gelato%20sans/GelatoSans-Medium.woff2') format('woff2'),
+       url('/font/gelato%20sans/GelatoSans-Medium.woff') format('woff'),
+       url('/font/gelato%20sans/GelatoSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gelato Sans';
+  src: url('/font/gelato%20sans/GelatoSans-Bold.woff2') format('woff2'),
+       url('/font/gelato%20sans/GelatoSans-Bold.woff') format('woff'),
+       url('/font/gelato%20sans/GelatoSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gelato Sans';
+  src: url('/font/gelato%20sans/GelatoSans-Black.woff2') format('woff2'),
+       url('/font/gelato%20sans/GelatoSans-Black.woff') format('woff'),
+       url('/font/gelato%20sans/GelatoSans-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gelato Sans';
+  src: url('/font/gelato%20sans/GelatoSans-BlackItalic.woff2') format('woff2'),
+       url('/font/gelato%20sans/GelatoSans-BlackItalic.woff') format('woff'),
+       url('/font/gelato%20sans/GelatoSans-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 .font-lean {
   font-family: 'Lean', var(--font-lean), var(--font-kanit), 'Montserrat', sans-serif !important;
 }
@@ -44,6 +94,10 @@
 
 .font-pumpkins-brush {
   font-family: 'PumpkinsBrush', var(--font-pumpkins-brush), var(--font-permanent-marker), cursive, sans-serif !important;
+}
+
+.font-gelato {
+  font-family: 'Gelato Sans', var(--font-gelato-sans), sans-serif !important;
 }
 
 
@@ -124,6 +178,7 @@
 @theme inline {
   --font-sans: 'Geist', 'Geist Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-gelato: var(--font-gelato-sans), 'Gelato Sans', sans-serif;
   --font-lean: var(--font-lean), sans-serif;
   --font-master-victory: var(--font-master-victory), cursive, sans-serif;
   --font-pumpkins-brush: var(--font-pumpkins-brush), cursive, sans-serif;

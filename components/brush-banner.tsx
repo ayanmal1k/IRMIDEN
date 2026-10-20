@@ -1,51 +1,70 @@
 import React from 'react'
 
 interface BrushBannerProps {
-  children: React.ReactNode
+  children?: React.ReactNode
+  text?: string
   className?: string
 }
 
-export function BrushBanner({ children, className = '' }: BrushBannerProps) {
+export function BrushBanner({ children, text = 'THE OG IS BACK', className = '' }: BrushBannerProps) {
   return (
     <div
-      className={`relative inline-flex items-center justify-start pl-4 sm:pl-6 pr-10 sm:pr-14 py-1.5 sm:py-2 select-none ${className}`}
+      className={`relative inline-flex items-center justify-center select-none px-6 sm:px-8 md:px-10 py-2 sm:py-2.5 md:py-3 ${className}`}
     >
-      {/* Authentic Paint Brush Stroke SVG Background */}
+      {/* Authentic Paint Brush Stroke SVG Background - Sized Bigger & Meatier */}
       <svg
-        viewBox="0 0 540 85"
+        viewBox="0 0 580 96"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
-        className="absolute inset-0 w-full h-full text-[#36ea1f] drop-shadow-[0_4px_16px_rgba(54,234,31,0.35)] pointer-events-none"
+        className="absolute inset-0 w-full h-full drop-shadow-[0_0_24px_rgba(117,242,40,0.55)] pointer-events-none"
       >
-        {/* Main solid brush body */}
+        <defs>
+          <linearGradient id="brushParrotGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#96fc37" />
+            <stop offset="45%" stopColor="#75f228" />
+            <stop offset="100%" stopColor="#52e013" />
+          </linearGradient>
+        </defs>
+
+        {/* Main solid, thick paint stroke body */}
         <path
-          d="M32 16 C18 19, 8 28, 14 38 C6 44, 10 56, 22 64 C35 70, 90 69, 180 71 C280 73, 390 72, 455 67 C482 65, 498 55, 492 44 C500 34, 488 22, 465 16 C415 10, 305 13, 190 14 C95 15, 50 14, 32 16 Z"
-          fill="currentColor"
+          d="M28 14 C12 17, 4 28, 10 40 C3 48, 8 62, 22 72 C38 80, 100 81, 200 83 C310 85, 430 84, 500 78 C530 75, 545 62, 536 48 C545 36, 530 21, 502 14 C450 7, 330 11, 205 12 C105 13, 52 12, 28 14 Z"
+          fill="url(#brushParrotGradient)"
         />
-        {/* Top/bottom edge dry bristle textures */}
+
+        {/* Top & bottom organic bristle edges */}
         <path
-          d="M50 13 C105 8, 205 9, 315 8 C385 7, 435 9, 450 13 C415 11, 335 10, 245 11 C145 12, 85 11, 50 13 Z"
-          fill="currentColor"
+          d="M48 11 C115 5, 230 7, 350 6 C430 5, 485 7, 502 11 C460 9, 370 8, 270 9 C160 10, 90 9, 48 11 Z"
+          fill="url(#brushParrotGradient)"
         />
         <path
-          d="M75 72 C145 75, 265 77, 365 75 C425 74, 455 71, 470 69 C435 72, 345 74, 235 73 C135 72, 90 73, 75 72 Z"
-          fill="currentColor"
+          d="M75 83 C155 87, 290 89, 400 87 C468 85, 502 81, 518 78 C480 82, 380 84, 260 83 C150 82, 95 83, 75 83 Z"
+          fill="url(#brushParrotGradient)"
         />
+
         {/* Left jagged brush stroke tips */}
-        <path d="M14 26 C-4 30, -2 38, 18 34 Z" fill="currentColor" />
-        <path d="M8 40 C-8 44, -4 52, 16 48 Z" fill="currentColor" />
-        <path d="M18 56 C-2 62, 4 70, 26 64 Z" fill="currentColor" />
-        {/* Right long tapering brush streaks (matching target image) */}
-        <path d="M460 18 C505 14, 532 20, 502 24 C482 26, 465 24, 460 18 Z" fill="currentColor" />
-        <path d="M472 30 C522 28, 538 36, 498 38 C482 39, 470 36, 472 30 Z" fill="currentColor" />
-        <path d="M468 46 C528 48, 540 56, 495 54 C478 53, 465 50, 468 46 Z" fill="currentColor" />
-        <path d="M448 62 C495 66, 520 72, 475 68 C458 66, 450 64, 448 62 Z" fill="currentColor" />
+        <path d="M12 24 C-6 28, -4 38, 16 34 Z" fill="url(#brushParrotGradient)" />
+        <path d="M6 40 C-10 44, -5 54, 15 50 Z" fill="url(#brushParrotGradient)" />
+        <path d="M16 58 C-5 65, 2 75, 25 68 Z" fill="url(#brushParrotGradient)" />
+        <path d="M22 18 C10 14, 2 20, 14 26 Z" fill="url(#brushParrotGradient)" />
+
+        {/* Right long dynamic tapering brush streaks */}
+        <path d="M495 18 C545 14, 575 20, 542 24 C520 26, 502 24, 495 18 Z" fill="url(#brushParrotGradient)" />
+        <path d="M508 32 C562 30, 580 38, 538 41 C520 42, 506 38, 508 32 Z" fill="url(#brushParrotGradient)" />
+        <path d="M504 50 C570 52, 582 61, 532 59 C514 58, 500 55, 504 50 Z" fill="url(#brushParrotGradient)" />
+        <path d="M482 68 C535 73, 562 80, 512 75 C494 73, 485 70, 482 68 Z" fill="url(#brushParrotGradient)" />
       </svg>
 
-      {/* Content Layer */}
-      <div className="relative z-10 flex items-center justify-start">
-        {children}
+      {/* Content Layer: black bold text fitting comfortably inside */}
+      <div className="relative z-10 flex items-center justify-center px-1">
+        {children ? (
+          children
+        ) : (
+          <span className="font-gelato text-xl xs:text-2xl sm:text-2.5xl md:text-3xl text-black font-black uppercase tracking-wider drop-shadow-[0_1px_1px_rgba(255,255,255,0.2)]">
+            {text}
+          </span>
+        )}
       </div>
     </div>
   )

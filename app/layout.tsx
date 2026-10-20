@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { SmoothScrollProvider } from '@/components/providers/smooth-scroll-provider'
 import { Toaster } from '@/components/ui/sonner'
-import { leanFont, masterVictoryFont, pumpkinsBrushFont } from '@/lib/fonts'
+import { gelatoSansFont, leanFont, masterVictoryFont, pumpkinsBrushFont } from '@/lib/fonts'
 import './globals.css'
 
 const geistSans = Geist({
@@ -106,7 +106,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${leanFont.variable} ${masterVictoryFont.variable} ${pumpkinsBrushFont.variable} ${kanit.variable} ${permanentMarker.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${gelatoSansFont.variable} ${leanFont.variable} ${masterVictoryFont.variable} ${pumpkinsBrushFont.variable} ${kanit.variable} ${permanentMarker.variable}`}
     >
 
       <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-primary selection:text-primary-foreground">
