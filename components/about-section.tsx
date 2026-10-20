@@ -61,7 +61,7 @@ export function AboutSection() {
         {/* Desktop Banner: 2171x724 (Aspect ratio 3:1) - Fully visible full width */}
         <div className="relative hidden h-full w-full md:block">
           <Image
-            src="/about-bg.png"
+            src="/about-bg.webp"
             alt="About IRMIDEN Banner"
             fill
             priority
@@ -75,7 +75,7 @@ export function AboutSection() {
         {/* Mobile Banner: 940x1369 - Fully visible full width with open top */}
         <div className="relative block h-full w-full md:hidden">
           <Image
-            src="/about-bg-mbl.png"
+            src="/about-bg-mbl.webp"
             alt="About IRMIDEN Mobile Banner"
             fill
             priority

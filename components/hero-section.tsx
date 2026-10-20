@@ -38,7 +38,7 @@ export function HeroSection() {
         {/* Desktop Banner: Character on left, open smoky space on right - Anchored to top-left so crown/shield never crop */}
         <div className="relative hidden h-full w-full md:block">
           <Image
-            src="/hero-bg.png"
+            src="/hero-bg.webp"
             alt="$IMD Hero Background Banner"
             fill
             priority
@@ -52,7 +52,7 @@ export function HeroSection() {
         {/* Mobile Banner: Anchored to top so mist & upper background never crop */}
         <div className="relative block h-full w-full md:hidden">
           <Image
-            src="/hero-bg-mobile.png"
+            src="/hero-bg-mobile.webp"
             alt="$IMD Mobile Hero Background Banner"
             fill
             priority
@@ -82,7 +82,7 @@ export function HeroSection() {
           >
             <div className="relative w-full max-w-[340px] xs:max-w-[420px] sm:max-w-[500px] md:max-w-[540px] lg:max-w-[620px] xl:max-w-[660px]">
               <Image
-                src="/hero tetx.png"
+                src="/hero tetx.webp"
                 alt="IRMIDEN ($IMD) - the OG is back"
                 width={681}
                 height={367}
@@ -129,7 +129,7 @@ export function HeroSection() {
           >
             {/* Buy $IMD Pill Button with Rocket Icon from react-icons */}
             <motion.a
-              href="https://sunpump.meme"
+              href="https://sunpump.meme/token/TEBhTK13xxVdMoEutByrsQgz9qdpaS6jLZ"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
@@ -143,7 +143,7 @@ export function HeroSection() {
 
             {/* Join Telegram Pill Button in Gelato Sans Black Bold */}
             <motion.a
-              href="https://t.me"
+              href="https://t.me/+W1i-pq2b7fE1NTVk"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
