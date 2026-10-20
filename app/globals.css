@@ -2,7 +2,52 @@
 @import 'tw-animate-css';
 @import 'lenis/dist/lenis.css';
 
+@font-face {
+  font-family: 'Lean';
+  src: url('/font/Lean%20400.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MasterVictory';
+  src: url('/font/Master-Victory-Demo-BF6a4c6fb62cec5.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MasterVictory';
+  src: url('/font/Master-Victory-Italic-Demo-BF6a4c6fb63edbc.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PumpkinsBrush';
+  src: url('/font/Pumpkins%20Brush%20Slant%20Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-lean {
+  font-family: 'Lean', var(--font-lean), sans-serif !important;
+}
+
+.font-master-victory {
+  font-family: 'MasterVictory', var(--font-master-victory), cursive, sans-serif !important;
+}
+
+.font-pumpkins-brush {
+  font-family: 'PumpkinsBrush', var(--font-pumpkins-brush), cursive, sans-serif !important;
+}
+
 @custom-variant dark (&:is(.dark *));
+
 
 :root {
   --background: oklch(1 0 0);

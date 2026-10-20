@@ -1,10 +1,11 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Copy, Check } from 'lucide-react'
 import { toast } from 'sonner'
-import { TronIcon } from '@/components/icons/tron-icon'
+
 
 const CONTRACT_ADDRESS = 'TEBhTK13xxVdMoEutByrsQgz9qdpaS6jLZ'
 
@@ -46,8 +47,15 @@ export function CaPill({ className = '' }: CaPillProps) {
       {/* Left: TRON logo & Contract Address text */}
       <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
         <div className="flex-shrink-0 transition-transform group-hover:scale-110 duration-200">
-          <TronIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+          <Image
+            src="/tron-trx-icon.webp"
+            alt="TRON"
+            width={24}
+            height={24}
+            className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
+          />
         </div>
+
         <span className="font-lean font-bold text-xs sm:text-sm text-zinc-300 tracking-wider flex-shrink-0">
           CA:
         </span>

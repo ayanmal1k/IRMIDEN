@@ -8,44 +8,43 @@ interface BrushBannerProps {
 export function BrushBanner({ children, className = '' }: BrushBannerProps) {
   return (
     <div
-      className={`relative inline-flex items-center justify-center px-6 sm:px-10 py-1.5 sm:py-2 select-none ${className}`}
+      className={`relative inline-flex items-center justify-start pl-4 sm:pl-6 pr-10 sm:pr-14 py-1.5 sm:py-2 select-none ${className}`}
     >
       {/* Authentic Paint Brush Stroke SVG Background */}
       <svg
-        viewBox="0 0 520 85"
+        viewBox="0 0 540 85"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
-        className="absolute inset-0 w-full h-full text-[#3de722] drop-shadow-[0_4px_16px_rgba(61,231,34,0.35)] pointer-events-none"
+        className="absolute inset-0 w-full h-full text-[#36ea1f] drop-shadow-[0_4px_16px_rgba(54,234,31,0.35)] pointer-events-none"
       >
-        {/* Main brush body with organic ragged contours */}
+        {/* Main solid brush body */}
         <path
-          d="M38 16 C22 18, 4 28, 10 38 C2 44, 5 56, 18 64 C28 70, 75 69, 160 71 C260 73, 380 72, 465 67 C488 65, 508 55, 502 44 C510 34, 498 22, 472 16 C425 10, 310 13, 195 14 C100 15, 55 14, 38 16 Z"
+          d="M32 16 C18 19, 8 28, 14 38 C6 44, 10 56, 22 64 C35 70, 90 69, 180 71 C280 73, 390 72, 455 67 C482 65, 498 55, 492 44 C500 34, 488 22, 465 16 C415 10, 305 13, 190 14 C95 15, 50 14, 32 16 Z"
           fill="currentColor"
         />
-        {/* Top/bottom edge dry bristle splatters */}
+        {/* Top/bottom edge dry bristle textures */}
         <path
-          d="M60 14 C110 9, 210 10, 320 8 C390 7, 440 10, 455 14 C420 12, 340 11, 250 12 C150 13, 90 12, 60 14 Z"
+          d="M50 13 C105 8, 205 9, 315 8 C385 7, 435 9, 450 13 C415 11, 335 10, 245 11 C145 12, 85 11, 50 13 Z"
           fill="currentColor"
         />
         <path
-          d="M80 71 C150 74, 270 76, 370 74 C430 73, 460 70, 475 68 C440 71, 350 73, 240 72 C140 71, 95 72, 80 71 Z"
+          d="M75 72 C145 75, 265 77, 365 75 C425 74, 455 71, 470 69 C435 72, 345 74, 235 73 C135 72, 90 73, 75 72 Z"
           fill="currentColor"
         />
         {/* Left jagged brush stroke tips */}
-        <path d="M12 28 C-6 32, -4 40, 16 36 Z" fill="currentColor" />
-        <path d="M8 42 C-10 46, -6 54, 14 50 Z" fill="currentColor" />
-        <path d="M18 58 C-2 64, 4 72, 26 66 Z" fill="currentColor" />
-        <path d="M28 20 C6 22, 10 28, 32 24 Z" fill="currentColor" />
-        {/* Right jagged brush stroke tips */}
-        <path d="M470 18 C502 14, 514 24, 482 26 Z" fill="currentColor" />
-        <path d="M480 32 C516 30, 524 40, 490 42 Z" fill="currentColor" />
-        <path d="M475 48 C512 52, 518 60, 486 56 Z" fill="currentColor" />
-        <path d="M455 64 C485 68, 500 74, 470 70 Z" fill="currentColor" />
+        <path d="M14 26 C-4 30, -2 38, 18 34 Z" fill="currentColor" />
+        <path d="M8 40 C-8 44, -4 52, 16 48 Z" fill="currentColor" />
+        <path d="M18 56 C-2 62, 4 70, 26 64 Z" fill="currentColor" />
+        {/* Right long tapering brush streaks (matching target image) */}
+        <path d="M460 18 C505 14, 532 20, 502 24 C482 26, 465 24, 460 18 Z" fill="currentColor" />
+        <path d="M472 30 C522 28, 538 36, 498 38 C482 39, 470 36, 472 30 Z" fill="currentColor" />
+        <path d="M468 46 C528 48, 540 56, 495 54 C478 53, 465 50, 468 46 Z" fill="currentColor" />
+        <path d="M448 62 C495 66, 520 72, 475 68 C458 66, 450 64, 448 62 Z" fill="currentColor" />
       </svg>
 
       {/* Content Layer */}
-      <div className="relative z-10 flex items-center justify-center">
+      <div className="relative z-10 flex items-center justify-start">
         {children}
       </div>
     </div>
