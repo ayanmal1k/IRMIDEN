@@ -35,7 +35,7 @@ export function HeroSection() {
     <section className="relative w-full min-h-screen overflow-hidden bg-black text-white selection:bg-[#75f228] selection:text-black">
       {/* 1. Background Art Direction (Desktop vs Mobile) */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        {/* Desktop Banner: Character on left, open smoky space on right */}
+        {/* Desktop Banner: Character on left, open smoky space on right - Anchored to top-left so crown/shield never crop */}
         <div className="relative hidden h-full w-full md:block">
           <Image
             src="/hero-bg.png"
@@ -44,11 +44,12 @@ export function HeroSection() {
             priority
             quality={95}
             sizes="100vw"
-            className="object-cover object-left lg:object-left-center select-none"
+            className="object-cover select-none"
+            style={{ objectPosition: 'left top' }}
           />
         </div>
 
-        {/* Mobile Banner: Character anchored at bottom, open mist at top & mid */}
+        {/* Mobile Banner: Anchored to top so mist & upper background never crop */}
         <div className="relative block h-full w-full md:hidden">
           <Image
             src="/hero-bg-mobile.png"
@@ -57,7 +58,8 @@ export function HeroSection() {
             priority
             quality={95}
             sizes="100vw"
-            className="object-cover object-center select-none"
+            className="object-cover select-none"
+            style={{ objectPosition: 'center top' }}
           />
         </div>
 
