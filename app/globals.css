@@ -78,6 +78,9 @@
 @theme inline {
   --font-sans: 'Geist', 'Geist Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-lean: var(--font-lean), sans-serif;
+  --font-master-victory: var(--font-master-victory), cursive, sans-serif;
+  --font-pumpkins-brush: var(--font-pumpkins-brush), cursive, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { SmoothScrollProvider } from '@/components/providers/smooth-scroll-provider'
+import { Toaster } from '@/components/ui/sonner'
+import { leanFont, masterVictoryFont, pumpkinsBrushFont } from '@/lib/fonts'
 import './globals.css'
 
 const geistSans = Geist({
@@ -29,10 +31,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'IRMIDEN | Modern Digital Experience',
-    template: '%s | IRMIDEN',
+    default: '$IMD | IRMIDEN',
+    template: '%s | $IMD',
   },
-  description: 'Next-generation web experience built with modern web standards, smooth scrolling, and dynamic interactions.',
+  description: '$IMD (IRMIDEN) - Simple, bold, and powerful crypto meme ecosystem built with modern web standards and smooth interactions.',
   metadataBase: new URL('https://irmiden.local'),
   robots: {
     index: true,
@@ -41,21 +43,43 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/icon.png',
+        type: 'image/png',
       },
     ],
-    apple: '/apple-icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
+  openGraph: {
+    title: '$IMD | IRMIDEN',
+    description: '$IMD (IRMIDEN) - Simple, bold, and powerful crypto meme ecosystem built with modern web standards and smooth interactions.',
+    url: 'https://irmiden.local',
+    siteName: 'IRMIDEN ($IMD)',
+    images: [
+      {
+        url: '/icon.png',
+        width: 323,
+        height: 377,
+        alt: '$IMD Icon',
+      },
+      {
+        url: '/hero-bg.png',
+        width: 1717,
+        height: 916,
+        alt: '$IMD Hero Banner',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '$IMD | IRMIDEN',
+    description: '$IMD (IRMIDEN) - Simple, bold, and powerful crypto meme ecosystem.',
+    images: ['/icon.png'],
   },
 }
+
 
 export default function RootLayout({
   children,
@@ -66,7 +90,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${leanFont.variable} ${masterVictoryFont.variable} ${pumpkinsBrushFont.variable}`}
     >
       <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-primary selection:text-primary-foreground">
         <ThemeProvider
@@ -78,6 +102,7 @@ export default function RootLayout({
           <SmoothScrollProvider>
             {children}
           </SmoothScrollProvider>
+          <Toaster position="bottom-right" richColors />
         </ThemeProvider>
         <Analytics />
       </body>

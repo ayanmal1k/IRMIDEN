@@ -42,7 +42,7 @@ export const fadeInUp: Variants = {
     transition: {
       delay: custom * 0.08,
       duration: 0.8,
-      ease: [0.21, 0.47, 0.32, 0.98],
+      ease: [0.21, 0.47, 0.32, 0.98] as const,
     },
   }),
 }
@@ -54,10 +54,11 @@ export const fadeIn: Variants = {
     transition: {
       delay: custom * 0.08,
       duration: 0.6,
-      ease: [0.21, 0.47, 0.32, 0.98],
+      ease: [0.21, 0.47, 0.32, 0.98] as const,
     },
   }),
 }
+
 
 export const staggerContainer: Variants = {
   hidden: { opacity: 0 },
