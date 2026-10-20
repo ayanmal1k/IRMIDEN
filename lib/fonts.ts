@@ -28,3 +28,45 @@ export const pumpkinsBrushFont = localFont({
   variable: '--font-pumpkins-brush',
   display: 'swap',
 })
+
+export const gelatoSansFont = localFont({
+  src: [
+    {
+      path: '../public/font/gelato sans/GelatoSans-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/font/gelato sans/GelatoSans-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/font/gelato sans/GelatoSans-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../public/font/gelato sans/GelatoSans-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/font/gelato sans/GelatoSans-BoldItalic.woff2',
+      weight: '700',
+      style: 'italic',
+    },
+    {
+      path: '../public/font/gelato sans/GelatoSans-Black.woff2',
+      weight: '900',
+      style: 'normal',
+    },
+    {
+      path: '../public/font/gelato sans/GelatoSans-BlackItalic.woff2',
+      weight: '900',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-gelato-sans',
+  display: 'swap',
+})
