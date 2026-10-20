@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Kanit, Permanent_Marker } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { SmoothScrollProvider } from '@/components/providers/smooth-scroll-provider'
@@ -18,6 +18,22 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
   display: 'swap',
 })
+
+const kanit = Kanit({
+  variable: '--font-kanit',
+  subsets: ['latin'],
+  weight: ['700', '800', '900'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+})
+
+const permanentMarker = Permanent_Marker({
+  variable: '--font-permanent-marker',
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+})
+
 
 export const viewport: Viewport = {
   themeColor: [
@@ -90,8 +106,9 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${leanFont.variable} ${masterVictoryFont.variable} ${pumpkinsBrushFont.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${leanFont.variable} ${masterVictoryFont.variable} ${pumpkinsBrushFont.variable} ${kanit.variable} ${permanentMarker.variable}`}
     >
+
       <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-primary selection:text-primary-foreground">
         <ThemeProvider
           attribute="class"

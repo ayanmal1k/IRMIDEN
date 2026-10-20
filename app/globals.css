@@ -35,7 +35,7 @@
 }
 
 .font-lean {
-  font-family: 'Lean', var(--font-lean), sans-serif !important;
+  font-family: 'Lean', var(--font-lean), var(--font-kanit), 'Montserrat', sans-serif !important;
 }
 
 .font-master-victory {
@@ -43,8 +43,9 @@
 }
 
 .font-pumpkins-brush {
-  font-family: 'PumpkinsBrush', var(--font-pumpkins-brush), cursive, sans-serif !important;
+  font-family: 'PumpkinsBrush', var(--font-pumpkins-brush), var(--font-permanent-marker), cursive, sans-serif !important;
 }
+
 
 @custom-variant dark (&:is(.dark *));
 
