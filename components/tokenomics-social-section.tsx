@@ -58,7 +58,7 @@ export function TokenomicsSocialSection() {
   return (
     <section
       id="tokenomics"
-      className="relative w-full overflow-visible bg-[radial-gradient(ellipse_140%_90%_at_50%_15%,#0d310a_0%,#071a05_40%,#030a02_75%,#000000_100%)] pt-12 sm:pt-14 md:pt-16 pb-8 sm:pb-10 md:pb-14 px-3 sm:px-6 md:px-8 xl:px-12 selection:bg-[#75f228] selection:text-black"
+      className="relative w-full overflow-visible bg-[radial-gradient(ellipse_140%_90%_at_50%_15%,#0d310a_0%,#071a05_40%,#030a02_75%,#000000_100%)] pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-8 sm:pb-10 md:pb-14 px-3 sm:px-6 md:px-8 xl:px-12 selection:bg-[#75f228] selection:text-black"
     >
       {/* Background Ambient Glows & Subtle Grid matching IRMIDEN Theme */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -160,10 +160,10 @@ export function TokenomicsSocialSection() {
             className="group relative rounded-[22px] sm:rounded-[28px] md:rounded-[34px] border-2 border-[#75f228]/55 hover:border-[#75f228] bg-gradient-to-r from-[#031502]/95 via-[#062005]/92 to-[#020e02]/95 backdrop-blur-xl p-4 sm:p-6 md:p-7 lg:p-8 flex flex-row items-center justify-between shadow-[0_0_30px_rgba(117,242,40,0.16),inset_0_0_20px_rgba(117,242,40,0.06)] hover:shadow-[0_0_45px_rgba(117,242,40,0.32)] transition-all duration-300 min-h-[200px] sm:min-h-[220px] md:min-h-[240px] overflow-visible"
           >
             {/* Ambient Spotlight behind Character */}
-            <div className="absolute right-4 sm:right-10 bottom-0 w-44 sm:w-56 md:w-64 h-44 sm:h-56 md:h-64 bg-[#75f228]/25 blur-3xl rounded-full pointer-events-none" />
+            <div className="absolute right-4 sm:right-10 bottom-0 w-48 sm:w-60 md:w-72 lg:w-80 h-48 sm:h-60 md:h-72 lg:h-80 bg-[#75f228]/25 blur-3xl rounded-full pointer-events-none" />
 
             {/* Left: Text & Social Buttons */}
-            <div className="flex-1 flex flex-col justify-center z-10 min-w-0 pl-1 pr-24 sm:pr-36 md:pr-44 lg:pr-52 xl:pr-60">
+            <div className="flex-1 flex flex-col justify-center z-10 min-w-0 pl-1 pr-28 sm:pr-40 md:pr-48 lg:pr-60 xl:pr-72 2xl:pr-80">
               <h3 className="font-gelato font-black text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-white tracking-tight leading-tight select-none">
                 Join Our Community
               </h3>
@@ -190,18 +190,18 @@ export function TokenomicsSocialSection() {
               </div>
             </div>
 
-            {/* Right: Thumbs-Up Character Image - attached to bottom, peaking out at top */}
-            <div className="absolute right-0 sm:right-2 md:right-3 lg:right-4 bottom-0 w-32 sm:w-44 md:w-52 lg:w-60 xl:w-68 h-[115%] sm:h-[120%] md:h-[125%] flex items-end justify-center z-20 pointer-events-none">
+            {/* Right: Thumbs-Up Character Image - attached to bottom, bursting out of top for 3D effect */}
+            <div className="absolute right-0 sm:right-1 md:right-2 lg:right-3 xl:right-4 bottom-0 w-36 sm:w-48 md:w-60 lg:w-72 xl:w-80 2xl:w-92 h-[135%] sm:h-[145%] md:h-[155%] lg:h-[165%] xl:h-[175%] flex items-end justify-center z-20 pointer-events-none">
               <motion.div
                 animate={{ y: [0, -4, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative w-full h-full flex items-end justify-center drop-shadow-[0_12px_25px_rgba(0,0,0,0.95)]"
+                className="relative w-full h-full flex items-end justify-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.95)] drop-shadow-[0_0_25px_rgba(117,242,40,0.35)]"
               >
                 <Image
                   src="/thumbs-up.png"
                   alt="IRMIDEN Thumbs Up Character"
-                  width={340}
-                  height={340}
+                  width={480}
+                  height={480}
                   className="w-full h-full object-contain object-bottom select-none"
                   priority
                 />
