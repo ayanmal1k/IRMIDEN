@@ -29,27 +29,35 @@ export function TokenomicsSocialSection() {
     {
       name: 'Telegram',
       icon: (
-        <FaTelegram className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 text-white group-hover:text-black transition-colors duration-200" />
+        <FaTelegram className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 text-white group-hover/btn:text-[#75f228] transition-colors duration-200" />
       ),
       href: 'https://t.me/+W1i-pq2b7fE1NTVk',
     },
     {
       name: 'X (Twitter)',
       icon: (
-        <FaXTwitter className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 text-white group-hover:text-black transition-colors duration-200" />
+        <FaXTwitter className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 text-white group-hover/btn:text-[#75f228] transition-colors duration-200" />
       ),
       href: 'https://x.com/Irmiden_TRON',
     },
     {
       name: 'TRON',
       icon: (
-        <svg
-          viewBox="0 0 32 32"
-          className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 text-white group-hover:text-black transition-colors duration-200"
-          fill="currentColor"
-        >
-          <path d="M2.5 3.8L29.5 2.5L18.2 29.5L2.5 3.8ZM7.2 6.8L17.5 24.8L25.8 5.8L7.2 6.8ZM19 8.2L13.8 19L20 17.2L19 8.2Z" />
-        </svg>
+        <span
+          role="img"
+          aria-label="TRON"
+          className="inline-block w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 bg-white group-hover/btn:bg-[#75f228] transition-colors duration-200"
+          style={{
+            maskImage: 'url(/tron-trx-icon.webp)',
+            WebkitMaskImage: 'url(/tron-trx-icon.webp)',
+            maskSize: 'contain',
+            WebkitMaskSize: 'contain',
+            maskRepeat: 'no-repeat',
+            WebkitMaskRepeat: 'no-repeat',
+            maskPosition: 'center',
+            WebkitMaskPosition: 'center',
+          }}
+        />
       ),
       href: 'https://sunpump.meme/token/TEBhTK13xxVdMoEutByrsQgz9qdpaS6jLZ',
     },
@@ -182,7 +190,7 @@ export function TokenomicsSocialSection() {
                     whileHover={{ scale: 1.12, y: -2 }}
                     whileTap={{ scale: 0.94 }}
                     aria-label={s.name}
-                    className="group/btn relative w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full border border-[#75f228]/60 hover:border-[#75f228] bg-black/75 hover:bg-[#75f228] flex items-center justify-center shadow-[0_0_15px_rgba(117,242,40,0.2)] hover:shadow-[0_0_25px_rgba(117,242,40,0.8)] transition-all duration-200 cursor-pointer"
+                    className="group/btn relative w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full border border-[#75f228]/50 hover:border-[#75f228] bg-black/80 hover:bg-[#071f05] flex items-center justify-center shadow-[0_0_15px_rgba(117,242,40,0.18)] hover:shadow-[0_0_25px_rgba(117,242,40,0.6)] transition-all duration-200 cursor-pointer"
                   >
                     {s.icon}
                   </motion.a>
