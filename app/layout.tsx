@@ -51,26 +51,45 @@ export const metadata: Metadata = {
     template: '%s | IRMIDEN ($IMD)',
   },
   description:
-    'Official IRMIDEN ($IMD) token on TRON (TRC20). The legendary 2020 TRON token from the original developer is officially back with 100% organic community growth. Contract: TEBhTK13xxVdMoEutByrsQgz9qdpaS6jLZ',
+    'Official IRMIDEN ($IMD) token on TRON (TRC20). First launched on August 15, 2020 (TRC10 ID: 1003154), the original developer has officially brought $IMD back on SunPump with 100% organic community growth. Contract: TEBhTK13xxVdMoEutByrsQgz9qdpaS6jLZ',
   applicationName: 'IRMIDEN ($IMD)',
   keywords: [
     'IRMIDEN',
     '$IMD',
     'IMD token',
     'TRON',
-    'TRC20',
-    'SunPump',
     'TRX',
+    'SunPump',
+    'SunSwap',
+    'Justin Sun',
+    'TRC20',
+    'TRC10',
+    'OG TRON Token',
+    '2020 TRON Token',
+    'TRON Meme Coin',
     'Meme Coin',
     'Crypto',
-    'The OG is Back',
-    'Original TRON Token 2020',
+    'Cryptocurrency',
+    'DeFi',
+    'Fair Launch',
+    'Bonding Curve',
+    'Web3',
+    'TronLink',
+    'Bitget Wallet',
     'TEBhTK13xxVdMoEutByrsQgz9qdpaS6jLZ',
+    'Stronger Together',
+    'Buy IMD',
+    'IMD Price',
+    'Crypto Twitter',
+    'TRON Ecosystem',
   ],
-  authors: [{ name: 'IRMIDEN Team' }],
+  authors: [{ name: 'IRMIDEN Team', url: 'https://x.com/Irmiden_TRON' }],
   creator: 'IRMIDEN',
   publisher: 'IRMIDEN',
-  metadataBase: new URL('https://irmiden.local'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://irmiden.xyz'),
+  alternates: {
+    canonical: '/',
+  },
   robots: {
     index: true,
     follow: true,
@@ -95,27 +114,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IRMIDEN ($IMD) | Legendary 2020 TRON Token is Back',
     description:
-      'Original developer of IRMIDEN ($IMD). The legendary 2020 TRON token is officially BACK as TRC20! Organic community growth. Contract: TEBhTK13xxVdMoEutByrsQgz9qdpaS6jLZ',
-    url: 'https://irmiden.local',
+      'The legendary August 15, 2020 TRON token is officially BACK as TRC20 on SunPump! Original 2020 developer, zero team dumps, 100% organic community. Contract: TEBhTK13xxVdMoEutByrsQgz9qdpaS6jLZ',
+    url: '/',
     siteName: 'IRMIDEN ($IMD)',
     images: [
       {
-        url: '/hero-design.png',
-        width: 1200,
-        height: 630,
-        alt: 'IRMIDEN ($IMD) - The OG is Back',
-      },
-      {
-        url: '/about-bg.png',
-        width: 2171,
-        height: 724,
-        alt: 'About IRMIDEN ($IMD)',
-      },
-      {
-        url: '/icon.png',
-        width: 323,
-        height: 377,
-        alt: '$IMD Icon',
+        url: '/hero-bg.png',
+        width: 1920,
+        height: 1080,
+        alt: 'IRMIDEN ($IMD) - Legendary 2020 TRON Token is Back',
       },
     ],
     locale: 'en_US',
@@ -123,14 +130,44 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@Irmiden_TRON',
+    creator: '@Irmiden_TRON',
     title: 'IRMIDEN ($IMD) | Legendary 2020 TRON Token is Back',
     description:
-      'Original developer of IRMIDEN ($IMD). Legendary 2020 TRON token is officially BACK as TRC20! Organic growth. Contract: TEBhTK13xxVdMoEutByrsQgz9qdpaS6jLZ',
-    images: ['/hero-design.png'],
+      'The legendary August 15, 2020 TRON token is officially BACK as TRC20 on SunPump! Original dev, zero team dumps, 100% organic growth. Contract: TEBhTK13xxVdMoEutByrsQgz9qdpaS6jLZ',
+    images: ['/hero-bg.png'],
   },
   category: 'cryptocurrency',
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://irmiden.xyz/#organization',
+      name: 'IRMIDEN',
+      url: 'https://irmiden.xyz',
+      logo: 'https://irmiden.xyz/icon.png',
+      sameAs: [
+        'https://x.com/Irmiden_TRON',
+        'https://t.me/+W1i-pq2b7fE1NTVk',
+        'https://sunpump.meme/token/TEBhTK13xxVdMoEutByrsQgz9qdpaS6jLZ',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://irmiden.xyz/#website',
+      url: 'https://irmiden.xyz',
+      name: 'IRMIDEN ($IMD)',
+      description:
+        'Official IRMIDEN ($IMD) token on TRON network (TRC20) - The legendary 2020 OG TRON token from the original developer.',
+      publisher: {
+        '@id': 'https://irmiden.xyz/#organization',
+      },
+    },
+  ],
+}
 
 export default function RootLayout({
   children,
@@ -143,7 +180,12 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${gelatoSansFont.variable} ${leanFont.variable} ${masterVictoryFont.variable} ${pumpkinsBrushFont.variable} ${kanit.variable} ${permanentMarker.variable}`}
     >
-
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-primary selection:text-primary-foreground">
         <ThemeProvider
           attribute="class"
